@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", 'Courier New', Courier, monospace;
+  background-color: var(--very-pale-blue);
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg_img {
+  background: url('./images/pattern-background-mobile.svg') no-repeat center/cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 50vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container img{
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: 900;
+  padding: 1.75rem 0;
+  color: var(--dark-blue);
+}
+
+.text {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--desaturated-blue);
+  padding: 0 2rem 1.5rem;
+}
+
+.container .subscription_plan_panel {
+  width: 85%;
+  padding: 20px;
+  background-color: var(--very-pale-blue);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.container .subscription_plan_panel article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .subscription_plan_panel article img {
+  padding-right: 20px;
+}
+
+/* BUTTONS */
+
+.btn {
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-change {
+  background-color: transparent;
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0;
+  width: 85%;
+}
+
+.btn-payment {
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: var(--bright-blue);
+  color: #fff;
+  box-shadow: 0px 15px 15px hsl(223, 47%, 23%, 0.3);
+}
+
+.btn-cancel {
+  width: 100%;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+}
+
+@media (min-width: 476px) {
+  .bg_img {
+    background: url('./images/pattern-background-desktop.svg') no-repeat center/cover;
+  }
+
+  .container {
+    width: 450px;
+  }
+
+  .text {
+    padding: 0 4rem 1.5rem;
+  }
+}
